@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BIYAHERO</title>
+        <link rel="icon" type="image/x-icon" href="static\images\byhr_ttltb_logo.png">
+        <style>
+            body {
+                margin: 0;
+                font-family: sans-serif
+            }
+
+            .nav_bar {
+                color: #f2f2f2;
+                background-color: #002366;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-family: sans-serif;
+                height: 59px;
+                width: 100vw;
+                position: fixed;
+                top: 0;
+            }
+
+            .nav_bar a {
+                color: #f2f2f2;
+                text-align: center;
+                padding: 20px 20px;
+                font-size: 17px;
+                font-family: sans-serif
+            }
+
+            .nav_bar a:hover {
+                background-color: #e89c31;
+                color: #f2f2f2;
+            }
+
+            .nav_bar .nb_right_links a {
+                color: #f2f2f2;
+                padding: 20px 20px;
+                font-size: 17px;
+                font-family: sans-serif
+            }
+
+            .nav_bar .nb_right_links a:hover {
+                background-color:  #e89c31;
+                color: #f2f2f2;
+            }
+
+            .nav_bar .nb_right_links .or {
+                color: #f2f2f2;
+                margin: 0 10px
+            }
+
+            .content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: calc(100vh - 50px);
+            }
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .slogan {
+               font-weight: 700;
+               text-align: center;
+               font-family: sans-serif;
+               color: #002366; 
+            }
+
+            .search_container {
+                position: relative;
+                width: 700px;
+                margin: 20px auto;
+                font-family: sans-serif;
+            }
+
+            .klgn_search_bar {
+                width: 700px;
+                height: 50px;
+                border-radius: 50px;
+                border: 1px solid #002366;
+                margin: 20px auto;
+                display: block;
+                padding: 5px 15px;
+                padding-right: 50px;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+
+            .search_icon {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+            }
+
+            .icons {
+                display: flex;
+                justify-content: center;
+                margin: 0 10px;
+            }
+
+            .icons img{
+                width: 50px;
+                border-radius: 50px;
+                margin: 0 10px;
+            }
+
+            .icons a:hover img {
+                transform: scale(1.5);
+            }
+
+            .footer {
+                color: #002366;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 59;
+                padding: 0 20px;
+                box-sizing: border-box;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .footer a {
+                color: #002366;
+                text-align: center;
+                padding: 15px 20px;
+                font-size: 15px;
+                height: 59px;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav_bar">
+            <div class="nb_left_links">
+                <a href="koreo.html">Koreo</a>
+            </div>
+
+            <div class="nb_right_links">
+                <a href="/log_in">Login</a>
+                <span class="or">or</span>
+                <a href="/register">Register</a>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <img src="static/images/byhr_logo.png" alt="biyahero_logo">
+                <h1 class="slogan">Konektado sa pamapagitan ng pandaigdigang puok-sapot</h1>
+                
+                <form class="search_container" action="/search" method="GET">
+                    <input type="text" class="klgn_search_bar" placeholder="Mangyaring ilagay ang bagay na hahanapin dito...">
+                    <img src="static/images/magnifying_glass.png" alt="search" class="search_icon" onclick="submitSearch()">
+                </form>
+
+                <div class="icons">
+                    <a href="bisala.html" title="Bisala"><img src="static/images/byhr_bisala_icon.png" alt="bisala_icon"></a>
+                    <a href="hunta.html" title="Hunta"><img src="static/images/byhr_hunta_icon.png" alt=""></a>
+                    <a href="balita.html" title="Balita"><img src="static/images/byhr_balita_icon.png" alt="balita_icon"></a>
+                    <a href="katha.html" title="Katha"><img src="static/images/byhr_katha_icon.png" alt="katha_icon"></a>
+                    <a href="laro.html" title="Laro"><img src="static/images/byhr_laro_icon.png" alt="laro_icon"></a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer_content">
+                <a href="about us.html">Tungkol sa PLAYGROUND</a> |
+                <a href="tou.html">Tuntunin sa paggamit</a> |
+                <a href="priv_pol.html">Polisiya sa Pribasidad</a> 
+            </div>
+        </footer>
+
+        <script>
+            function submitSearch() {
+                var searchInput = document.querySelector('.klgn_search_bar').value;
+                if (searchInput.trim() === "") {
+                    return
+                }
+                document.querySelector('.search_container').submit();
+            }
+        </script>
+    </body>
+</html>

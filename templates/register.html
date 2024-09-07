@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BIYAHERO - REGISTER</title>
+        <link rel="icon" type="image/x-icon" href="static/images/byhr_ttltb_logo.png">
+        <style>
+            body {
+                font-family: sans-serif;
+                background-color: #f2f2f2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+                flex-direction: column;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            form {
+                border:  4px solid #002366;
+                width: 450px;
+                background-color: #f2f2f2;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            .container {
+                padding: 16px;
+                background-color: #f2f2f2;
+            }
+
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid #002366;
+                box-sizing: border-box;
+                margin: 8px 0;
+            }
+
+            input[type=text]:focus, input [type=password]:focus {
+                background-color: #f2f2f2;
+            }
+
+            hr {
+                border: 1px solid #002366;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+
+            .registration_button{
+                background-color: #006b88;
+                color: #f2f2f2;
+                padding: 20px 20px;
+                font-size: 16px;
+                margin: 8px 0;
+                border: 2px solid #002366;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+
+            .registration_button:hover {
+                opacity: 1;
+            }
+
+            a {
+                color: #004777;
+            }
+
+            .container_sign_in {
+                background-color: #f2f2f2;
+                text-align: center;
+
+            }
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+                max-width: 450px;
+                height: auto;
+                margin: 0 auto 20px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="static/images/byhr_logo.png" alt="biyahero_logo">
+        <form action="/register" method="POST">
+            <div class="container">
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Ilagay dito ang iyong username" name="username" id="username" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Ilagay dito ang iyong email" name="email" id="email" required>
+
+                <label for="psw_repeat"><b>Password</b></label>
+                <input type="text" placeholder="Ilagay dito ang iyong password" name="psw" id="psw" required>
+
+                <label for="psw_repeat"><b>Ulitin ang password</b></label>
+                <input type="text" placeholder="Ilagay dito uli ang iyong password" name="psw_repeat" id="psw_repeat" required>
+                <hr>
+            </div>
+
+            <input type="checkbox" checked="checked">Sa paglikha ng isang account sumasang-ayon ka sa aming <a href="tou.html">Tuntunin sa paggamit</a> at <a href="priv_pol.html">Polisiya sa Pribasidad</a>
+
+            <button type="submit" class="registration_button">Register</button>
+            
+            <div class="container_sign_in">
+                <p>Mayroon ka na bang account? <a href="/log_in">Magsign-in</a> dito.</p>
+            </div>
+        </form>
+    </body>
+</html>

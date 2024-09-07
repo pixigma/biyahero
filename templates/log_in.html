@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BIYAHERO - LOG IN</title>
+        <link rel="icon" type="image/x-icon" href="static/images/byhr_ttltb_logo.png">
+        <style>
+            body {
+                font-family: sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f2f2f2;
+                flex-direction: column;
+            }
+
+            button {
+                font-family: sans-serif;
+                background-color: #FECC86;
+                border: solid #e89c31;
+                width: 100%;
+                color: #f2f2f2;
+                padding: 15px;
+                margin: 10px 10px;
+                cursor: pointer;
+            }
+
+            form {
+                border: 4px solid #e89c31;
+                font-family: sans-serif;
+                width: 450px;
+                margin: 0 auto;
+                background-color: #f2f2f2;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+            }
+
+            input[type=text], input[type=password] {
+                width: 100%;
+                margin: 8px 0;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid #e89c31;
+                box-sizing: border-box;
+            }
+
+            button:hover {
+                opacity: 0.7;
+            }
+
+            .container {
+                padding: 25px;
+                background-color: #f2f2f2;
+            }
+
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                align-items: center;
+                max-width: 450px;
+                height: auto;
+                margin: 0 auto 20px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="static/images/byhr_logo.png" alt="biyahero_logo">
+        <form>
+            <div class="container">
+                <label>Email o Username</label>
+                <input type="text" placeholder="Ilagay dito ang iyong email o username" name="email_or_username" required>
+
+                <label>Password</label>
+                <input type="password" placeholder="Ilagay dito ang iyong password" name="password" required>
+
+                <button type="submit">Log in</button>
+                <input type="checkbox" checked="checked">Tadaan ang user
+                <br>
+                Nakalimutan mo ba ang iyong <a href="frgt_password.html">password</a>?
+            </div>
+        </form>
+    </body>
+</html>
